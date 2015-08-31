@@ -1,0 +1,251 @@
+\documentclass[letterpaper,10pt]{article}
+
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{array}
+\definecolor{dgray}{gray}{0.4}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=dgray
+}
+
+\usepackage[xetex]{graphicx}
+\usepackage{fontspec,xunicode}
+\usepackage[
+top    = 2.75cm,
+bottom = 2.75cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+\geometry{paperwidth=8.5in, paperheight=13.5in}
+
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+
+
+\setlength{\outerbordwidth}{2pt}
+\definecolor{shadecolor}{gray}{0.40}
+\definecolor{shadecolorB}{gray}{0.90}
+
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+%\setlength{\paperheight}{12in}
+%\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{12in}
+\setlength{\textwidth}{7in}
+%\setlength{\topmargin}{-0.8in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{2pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{2pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.83in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Sudhanshu Bahety}  
+&D-212,HJB Hall of Residence\\ 
+UG (4th year), Computer Science and Engineering
+& Kharagpur, India, PIN-721306\\
+Indian Institute of Technology Kharagpur& \href{mailto:bahetysudhanshu@gmail.com}{bahetysudhanshu@gmail.com}\\
+\end{tabular*}
+\\[-10pt]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabular*}{7in}{ c @{\extracolsep{\fill} } c @{\extracolsep{\fill} } c @{\extracolsep{\fill} } r }
+\textbf{Degree/Examination}  & \textbf{Institution}  & \textbf{Year}  & \textbf{Grade}   \\
+\hline \\ [-1.5ex]
+B.Tech(upto $6^{th}$ semester)  & Indian Institute Of Technology,Kharagpur &  2012-2016  & CGPA - 9.47/10  \\
+& & & Rank - 8(Total),6(BTech) \\
+\hline \\ [-1.5ex]
+High School & Calcutta Boys' School & 2011 & 91.5\% \\
+\hline \\ [-1.5ex]
+Secondary School & Calcutta Boys' School & 2009 & 90.2\% \\
+\hline \\ [-1.5ex]
+\end{tabular*}
+\\[-10pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Relevant Courses Taken}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\begin{tabbing}
+Programming and Data Structures \hspace{2cm}\= Algorithms-I \hspace{2cm}\= Algorithms-II \\
+Machine Learning\textsuperscript{\#} \> Artificial Intelligence\textsuperscript{\#} \> Natural Language Processing\textsuperscript{\#} \\
+Formal Languages and Automata Theory \> Software Engineering\textsuperscript{L} \> Probability and Statistics\\
+Computer Organization and Architechture\textsuperscript{L}\> Signals and Systems\textsuperscript{L}\> Switching Circuits and Logic Design\textsuperscript{L}\\
+\end{tabbing}
+\vspace{-0.60cm}
+\hspace{12.5cm} \footnotesize{
+\textsuperscript{\#}To be completed before Dec 2015}\\[-5pt]
+\vspace{0.10cm}
+\hspace{12.6cm} \footnotesize{
+\textsuperscript{L}Subject has Lab component}\\[-5pt]
+
+\resheading{Internships}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \textbf{Context Aware Media Content Analysis}}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentors: Dr. Shiv Saini, Dr. Atanu Sinha}&Adobe Big Data Intelligence Lab, May - July 2015
+\end{tabular*}
+\begin{itemize}
+\item Studied the patterns of how a media article gets consumed.
+\item Developed an Android Application \href{https://play.google.com/store/apps/details?id=com.adobe.atl.proreader&hl=fr_CA}{ProReader} (Available on Play Store) to study media consumption pattern.
+\item Made a Linear Regression predictive model to predict the context in which a new media article would get consumed.
+\item Implemented the linear regression model in R.\\[10pt]
+\end{itemize}
+{\large \textbf{Human Activity Recognition}}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentor: Dr. Shiv Saini}&Adobe Big Data Intelligence Lab, May - July 2015
+\end{tabular*}
+\begin{itemize}
+\item Developed an Android Application to collect sensor datas.
+\item Analyzed different patterns in data while a person is in different context while reading.
+\item Applied machine learning models to estimate the context of the user.\\[10pt]
+\end{itemize}
+
+{\large \textbf{Key Management Scheme for Distributed Sensor Networks}}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentor: Dr. Sushmita Ruj}&Indian Statistical Institute, May - June 2014
+\end{tabular*}
+\begin{itemize}
+\item Studied how the information travels between two nodes within a network.
+\item Analyzed how the average degree of nodes,average path length changes if an adversary attacks some nodes in the network.
+\item Simulated the above network using networkx in C++.
+\end{itemize}
+\vspace{-8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large \textbf{BTech Project : Spam detection in meta-data of YouTube videos}}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentor: Dr. Pawan Goyal}&Jan 2015 - Current
+\end{tabular*}
+\begin{itemize}
+\item Analyzing how spammers post videos with false metadata to increase views and likes of the videos.
+\item Analyzing the comments,view,likes/dislikes and other feature associated with the video to tag whether a metadata is false or not.
+\item Adapting NLP techniques to get sentiments of the comments and ML techniques to get classify metadata as spam or not spam.\\[10pt]
+\end{itemize}
+
+{\large \textbf{Error concealment in videos}}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentor: Avisek Lahiri}&JAugust 2015 - Current
+\end{tabular*}
+\begin{itemize}
+\item Used dlib library to run the face landmark detection alogrithm in live webcam video.
+\item Used openCV to run delaunay triangulation on the points present on the face, thereby segmenting the face.
+\item Used Matlab to calculate the affine inverse and thus using the previous frames of videos to fill the bad pixels in current frame.\\[10pt]
+\end{itemize}
+
+{\large \textbf{Database Management Term Project : IPL Auctioning System}}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentor: Dr. Pallab Dasgupta and Dr. Animesh Mukherjee}&April 2015
+\end{tabular*}
+\begin{itemize}
+\item Crawled Wikipedia and official IPL websites to get the IPL Auctioning data.
+\item System was designed using Java Swing Library.
+\item Supported various range queries and standard auctioning queries on the dataset.\\[10pt]
+\end{itemize}
+
+{\large \textbf{Complex Network Term Project : Twitter LIWC}}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{Mentor: Dr. Animesh Mukherjee}&January - April 2015
+\end{tabular*}
+\begin{itemize}
+\item Manually increased the size of categories of LIWC by adding words and emoticons that are used in OSN.
+\item Used dictionary to convert out of vocabulary words used in OSN to in vocabulary words.
+\item Implemented an algorithm of distributional thesarus to increase the words in each categories.\\[10pt]
+\end{itemize}
+
+{\large \textbf{Compilers Term Project :Compiler for tinyC language (a subset of C-language)}}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{Mentor: Dr. Partha Pratim Das} & August 2014-Nov 2014
+\end{tabular*}
+\begin{itemize}
+\item Used flex for lexical analysis and Used yacc for writing the grammar rules and actions.
+\item Supported recursive functions.
+\end{itemize}
+\vspace{5pt}
+{\large \textbf{Software Engineering Term Project: Online Sales Portal}}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{Mentor: Dr. Partha Pratim Das} & April 2014
+\end{tabular*}
+\begin{itemize}
+\item Made an GUI Application using Java Swing.
+\item The idea was similar to buy and sell products online like eBay,OLX.
+\end{itemize}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Startup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item Patent Pending (295/KOL/2015): A system and method for range independent tamper proof tracking
+\item Finalist at Ideas ’15 Techkriti, Business Plan competition
+\item Finalist at Kshitij Business Plan competition, for the most innovative startup idea
+\end{itemize}
+
+\vspace{-8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Achievements in Technical Activites}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{Overnite-2015 Programming Competition (ACM Certified)}  & \textsc{2015} \\
+My team Heapify were finalist in the onsite round.\\[5pt]
+\textbf{Facebook HackerCup}  & \textsc{2015} \\
+Secured a position of 418 in the Round 2, qualified Round 1 with a position of 504\\[5pt]
+\textbf{Mozboot Hackathon, Kshitij- IIT Kharagpur}  & \textsc{2014} \\
+Won the hackathon organized by \textbf{Mozilla} by making web game of blackjack. I wrote the entire code in JavaScript.\\[5pt]
+\textbf{Google Devfest Competition}  & \textsc{2013} \\
+Made a mathematical android application game of Nim in which I implemented the front end of the application.\\[5pt]
+\textbf{IEEE Certified Image Processing Workshop}  & \textsc{2013} \\
+Programmed a Lane Detection Robot to detect path and move accordingly using openCV library in C++.\\
+Also, programmed a Shape Detection Robot to identify circle, square, or a triangle.\\[5pt]
+\end{tabular*}
+\vspace{-8pt}
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-2pt}
+\textbf{Programming Languages :} C, C++, MySQL, Java, Python, R, HTML5, CSS, JavaScript\\
+\textbf{IDE :} Eclipse, Netbeans, Android Studio\\
+\textbf{Platforms :} Windows, Linux
+\vspace{-8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Extra Curricular Activities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item Won \textbf{Gold Medal} in Karate at Meerut.(\textbf{Final Round} of All India Karate Competition, 2001)
+\item Won \textbf{Bronze Medal} in Karate at Mangalore.(\textbf{Second Round} of All India Karate Competition, 1999)
+\item Won \textbf{Bronze Medal} in Karate at Kolkata.(\textbf{First Round} of All India Karate Competition, 1998)
+\item Served at National Service Scheme for 2 years, IIT Kharagpur.
+\item Taught Freshers basics of Programming and Data Structures using C.
+\end{itemize}
+
+\end{document}
